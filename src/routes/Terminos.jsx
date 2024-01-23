@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer";
 
 import { FloatButton } from 'antd';
 
+import { ScrollToTop } from '../components/ScrollToTop';
 
 import '../css/Terminos.css'
 
@@ -17,6 +18,7 @@ export function Terminos() {
         <Header></Header>
 
         <div className="containerrr">
+        <ScrollToTop />
             <h2>Términos y Condiciones</h2>
 
             <h3>Información Relevante</h3>

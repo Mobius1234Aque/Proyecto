@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+// Agrega la importación de NotFound al inicio de tu archivo
+import NotFound from './errores/404';
+
 
 import ReactDOM from 'react-dom/client';
 
@@ -20,6 +23,7 @@ import './css/index.css';
 
 import { Misalumno } from "./routes/Misalumnos";
 
+ 
 
 import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
 
@@ -28,18 +32,29 @@ import { Salud } from './routes/Salud';
 import { Preguntas } from './routes/Preguntas';
 import { Escoger } from './routes/Escogerexa';
 import { Historial } from './routes/Historial';
+import { ModA } from './routes/Modalumnos'; 
+
+import Formulario from './routes/Formulario';
+
+import { ReContraseña } from './routes/ReContraseña'; 
+import { Re2Contraseña } from './routes/Re2Contraseña'; 
+
+import { Registro } from './routes/Registro';  
+
+
 
 
 // Componente ScrollToTop
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+  
 
 const router = createBrowserRouter([
     {
@@ -90,16 +105,46 @@ const router = createBrowserRouter([
         path:'/Historial',
         element:<Historial/>
     },
-
+    {
+        path:'/modal',
+        element:<ModA/>
+    },
+    {
+        path: '*',
+        element: <NotFound />
+    },
+    {
+        path: '/Formulario',
+        element: <Formulario/>
+    },
+    {
+        path: '/ReContraseña',
+        element: <ReContraseña/>
+    },
+    {
+        path: '/Re2Contraseña',
+        element: <Re2Contraseña/>
+    },
+    {
+        path: '/Registro',
+        element: <Registro/>
+    }, 
+  
+  
+  
+ 
+ 
 
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <>
-        <RouterProvider router={router}>
-
-        </RouterProvider>
-    </>
+  <>
+    <RouterProvider router={router}>
+      <ScrollToTop />
+    
+    
+    </RouterProvider>
+  </>
 );

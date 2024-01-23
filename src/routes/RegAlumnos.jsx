@@ -56,9 +56,9 @@ export function Regalu() {
                             <p className="ant-upload-drag-icon">
                     <InboxOutlined />
                             </p>
-                            <p className="ant-upload-text">Click aqui para subir su lista de alumnos</p>
+                            <p className="ant-upload-text">Click aquí para subir su lista de alumnos</p>
                             <p className="ant-upload-hint">
-                                Si llega a presentar algun problema con la subida de su documento no dude en pedir ayuda y soporte tratara de dar solucion lo antes posible
+                            Si llega a presentar algún problema con la subida de su documento no dude en pedir ayuda y soporte tratara de dar solución lo antes posible. 
                             </p>
                     </Dragger>
                     <span className='a'>

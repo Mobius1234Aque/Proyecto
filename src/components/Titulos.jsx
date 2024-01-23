@@ -14,3 +14,31 @@ export function Subtitulo({subTit}) {
     );
     
 }
+
+ 
+export function Contenido({ conTit }) {
+    const estilo = {
+        fontFamily: 'Times New Roman',
+        fontSize: '20px',  
+    };
+    return (
+        <div className='contenido' style={estilo}>
+            {conTit}
+        </div>
+    );
+}
+
+ 
+export function Notificacion({ noti }) {
+    const estilo = {
+        fontFamily: 'Times New Roman',
+        fontSize: '16px',  
+    };
+    return (
+        <div className='notificacion' style={estilo}>
+            {noti}
+        </div>
+    );
+}
+
+

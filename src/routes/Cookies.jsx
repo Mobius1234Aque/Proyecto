@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ScrollToTop } from '../components/ScrollToTop';
 import { Header } from '../components/Header';
 
 import { Footer } from "../components/Footer";
@@ -18,6 +19,7 @@ export function Cookies() {
             <Header/>
                 
                 <div className="containerrr">
+                <ScrollToTop />
                     <h2>Política de cookies</h2>
                     <p>Esta política de cookies explica cómo la Zona 012 utilizan cookies y tecnologías similares para reconocerlo
                         cuando visita nuestra aplicación, incluidas, entre otras, cualquier URL relacionada, móvil o localizada.

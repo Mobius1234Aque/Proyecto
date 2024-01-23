@@ -1,0 +1,11 @@
+.imagen-container {
+    text-align: center;
+  }
+
+  .imagen-pequena-centrada {
+    max-width: 300px; /* Ajusta el valor según sea necesario */
+    max-height: 200px; /* Ajusta el valor según sea necesario */
+    display: block;
+    margin: 0 auto;
+  }
+  

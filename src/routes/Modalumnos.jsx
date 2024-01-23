@@ -2,13 +2,18 @@ import React from 'react';
 
 import { Header } from '../components/Header';
 
-import { Link } from "react-router-dom";
-
-
 import { Footer } from "../components/Footer";
 
 import { Subtitulo, Titulo } from '../components/Titulos';
-import { Space, Table, Tag } from 'antd';
+
+import url from '../img/imagenDos.jpg'
+
+import { GiHealthNormal } from "react-icons/gi";
+
+import '../css/Quien.css'
+
+import { Space, Table, Tag, Button} from 'antd';
+import { Link } from 'react-router-dom';
 const columns = [
   {
     title: 'Nombre',
@@ -28,12 +33,12 @@ const columns = [
   },
   
   {
-    title: ' ',
-    key: '',
+    title: 'Acciones ',
+    key: 'action',
     render: (_, record) => (
-      <Space size="middle">
-        <a> </a>
-      </Space>
+      <Button size="middle">
+        <Link to={'/'}>Editar</Link>
+      </Button>
     ),
   },
 ];
@@ -52,16 +57,16 @@ const data = [
   },
 ];
 
-export function Misalumno() {
+export function ModA() {
     return(
         <>
-        <Header/>
-
-            <Titulo tit={'Mi lista de alumnos'}/>
+            <Header/>
+                <Titulo tit={'Modificar mi lista de alumnos '}/>
             <div style={{maxWidth:'100%', width:'1000px', textAlign:'center', display: 'block', margin: 'auto'}}>
                 <Table style={{width:'850px', display: 'block', margin: 'auto'}} columns={columns} dataSource={data} />
             </div>
-
-        <Footer/>
-        </>)
+            <Footer/>
+        </>
+    )
+    
 }

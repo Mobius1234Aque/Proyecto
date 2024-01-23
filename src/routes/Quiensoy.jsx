@@ -15,7 +15,7 @@ export function Quien() {
     return(
         <>
             <Header/>
-                <Titulo tit={'¿Quienes Somos?'}/>
+                <Titulo tit={'¿Quiénes Somos?'}/>
                     <div className="quienCon">
 
                         <div className="quien-element">
@@ -23,7 +23,7 @@ export function Quien() {
                         </div>
 
                         <div className="quien-element">
-                            <Subtitulo subTit={'Nuestra Mision'}/>
+                            <Subtitulo subTit={'Nuestra Misión'}/>
                             <p>
                             Nuestra misión en la Zona Escolar de Escuelas Primarias Indígenas es proporcionar una educación de calidad que sea accesible, inclusiva y equitativa para todos los niños de nuestras comunidades indígenas. Nos esforzamos por preservar y promover la rica diversidad cultural y lingüística de nuestras comunidades a través de un currículo que refleje sus valores y tradiciones únicas. Estamos comprometidos a fomentar un ambiente de aprendizaje seguro, respetuoso y acogedor que permita a cada estudiante alcanzar su máximo potencial.
                             </p>

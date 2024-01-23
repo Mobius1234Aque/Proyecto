@@ -21,28 +21,29 @@ export function Footer (){
                         : zona012huazalingo@gmail.com
                     </p>
                     <p>
-                        <strong>Telefono</strong>
+                        <strong>Teléfono</strong>
                         : +52 771-191-3179
                     </p>
                 </div>
 
                 <div className="footer-section">
-                    <h3>Enlaces Útiles</h3>
+                    <h3>Enlaces útiles</h3>
                     <p >
-                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Terminos"}> - Terminos y condiciones</Link>
+                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Terminos"}> - Términos y condiciones</Link>
                     </p>
                     <p >
-                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Politicas"}> - Politica de Privacidad</Link>
+                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Politicas"}> - Política de privacidad</Link>
                     </p>
                     <p >
-                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Cookies"}>- Politica de Cookies</Link>
+                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Cookies"}>- Política de Cookies</Link>
                     </p>
                 </div>
 
                 <div className="footer-section">
-                    <h3>Síguenos en Redes Sociales</h3>
+                    <h3>Síguenos en redes sociales</h3>
                     <p >
-                        <Link style={{ color:'white',textDecoration:'none'}} to={"/Terminos"}>Terminos y condiciones</Link>
+                        <Link style={{ color:'white',textDecoration:'none'}} to={"https://www.facebook.com/reynadelosangele/"}>Facebook</Link><br></br>
+                        <Link style={{ color:'white',textDecoration:'none'}} to={"/"}>Twitter</Link>
                     </p>
 
                 </div>

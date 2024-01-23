@@ -2,6 +2,9 @@ import logo from '../img/logo.png'
 import { Link } from "react-router-dom";
 import { FaUpload, FaEdit } from "react-icons/fa";
 import { FaTableList } from "react-icons/fa6";
+
+
+import { Subtitulo, Titulo, Contenido } from '../components/Titulos';
 export function Header() {
     return(
         <div className="barNav">
@@ -9,11 +12,15 @@ export function Header() {
                 <img src = {logo} alt="Logo para pagina web zona escolar 012" title="Zona escolar 012"/>
             </div>
 
+
+
             <ul className="barNav-menu">
-                <li className="barNav-menu-element">
+
+
+            <li className="barNav-menu-element">
                     <span className='barNav-text'>
                         <Link className='barNav-text' to={"/"}>
-                        Inicio
+                        <Contenido conTit={"Inicio"} />
                         </Link>
                     </span>
                 </li>
@@ -21,44 +28,49 @@ export function Header() {
 
                 <li className="barNav-menu-element">
                     <span className='barNav-text'>
-                        <Link className='barNav-text' to={"/Salud"}>
-                        Salud
+                        <Link className='barNav-text' to={"/Registro"}>
+                        <Contenido conTit={"Registro"} />
                         </Link>
                     </span>
                 </li>
+
+                
+            <li className="barNav-menu-element">
+                    <span className='barNav-text'>
+                        <Link className='barNav-text' to={"/Login"}>
+                         
+                        <Contenido conTit={"Login"} />
+                        </Link>
+                    </span>
+                </li>
+
+
+                 
+                
                 <li className="barNav-menu-element">
                     <span className='barNav-text'>
                         <Link className='barNav-text' to={"/Preguntas"}>
-                        Preguntas frecuentas
+                        <Contenido conTit={" Preguntas frecuentas"} />
                         </Link>
                     </span>
                 </li>
                 <li className="barNav-menu-element">
                     <span className='barNav-text'>
-                        <Link className='barNav-text' to={"/Quien"}>
-                        ¿Quienes Somos?
+                        <Link className='barNav-text' to={"/Quien"}> 
+                        <Contenido conTit={"¿Quiénes somos?"} />
+                      
                         </Link>
                     </span>
                 </li>
+               
                 <li className="barNav-menu-element">
                     <span className='barNav-text'>
-                        <Link className='barNav-text' to={"/Quien"}>
-                        Alumnos
-                        </Link>
-                    </span>
-                    <div className="submenu">
-                        <Link to={"/RegA"}>Registrar <FaUpload /></Link>
-                        <Link to={"/MiLista"}>Mis alumnos <FaTableList /></Link>
-                        <Link to={"/Ruta2"}>Modificar mi lista <FaEdit /></Link>
-                    </div>                
-                    </li>
-                <li className="barNav-menu-element">
-                    <span className='barNav-text'>
-                        <Link className='barNav-text' to={"/esExamen"}>
-                        Generar Examenes
+                        <Link className='barNav-text' to={"/Formulario"}>
+                        <Contenido conTit={"Formulario"}/>
                         </Link>
                     </span>
                 </li>
+
             </ul>
             
         </div>
