@@ -1,47 +1,32 @@
 import React, { useEffect } from "react";
 // Agrega la importación de NotFound al inicio de tu archivo
 import NotFound from "./errores/404";
-
 import ReactDOM from "react-dom/client";
-
 import { App } from "./App";
-
 import { Home } from "./routes/Home";
-
 import { Terminos } from "./routes/Terminos";
-
 import { Quien } from "./routes/Quiensoy";
-
 import { Politicas } from "./routes/Politicas";
-
 import { Cookies } from "./routes/Cookies";
-
 import { Regalu } from "./routes/RegAlumnos";
-
 import "./css/index.css";
-
 import SearchComponent from "./routes/Misalumnos";
-
 import {
   createBrowserRouter,
   RouterProvider,
   useLocation,
+  useRoutes,
 } from "react-router-dom";
-
 import { Login } from "./routes/Login";
 import { Salud } from "./routes/Salud";
 import { Preguntas } from "./routes/Preguntas";
 import { Escoger } from "./routes/Escogerexa";
 import { Historial } from "./routes/Historial";
 import { ModA } from "./routes/Modalumnos";
-
 import Formulario from "./routes/Formulario";
-
 import { ReContraseña } from "./routes/ReContraseña";
 import { Re2Contraseña } from "./routes/Re2Contraseña";
-
 import { Registro } from "./routes/Registro";
-
 // Componente ScrollToTop
 const ScrollToTop = () => {
   const { pathname } = useLocation();

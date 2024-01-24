@@ -3,7 +3,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Titulo } from "../components/Titulos";
 import { Table } from "antd";
-import { Input, Space } from "antd";
+import { Input, Space, Select } from "antd";
 const { Search } = Input;
 
 const columns = [
@@ -23,11 +23,28 @@ const columns = [
     dataIndex: "gender",
     key: "username",
   },
+  {
+    title: "Edad",
+    dataIndex: "age",
+    key: "age",
+  },
+  {
+    title: "Grado",
+    dataIndex: "grade",
+    key: "grade",
+  },
+  {
+    title: "Grupo",
+    dataIndex: "group",
+    key: "group",
+  },
 ];
 
 const SearchComponent = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+  const [filterGender, setFilterGender] = useState("");
+  const [filterGrade, setFilterGrade] = useState("");
 
   const URL = "src/assets/datos.json";
 
@@ -45,13 +62,14 @@ const SearchComponent = () => {
     setSearch(e.target.value);
   };
 
-  const results = !search
-    ? users
-    : users.filter((user) =>
-        user.first_name
-          ? user.first_name.toLowerCase().includes(search.toLowerCase())
-          : false
-      );
+  const results = users.filter((user) => {
+    return (
+      (!search ||
+        user.first_name.toLowerCase().includes(search.toLowerCase())) &&
+      (!filterGender || user.gender === filterGender) &&
+      (!filterGrade || user.grade === filterGrade)
+    );
+  });
 
   useEffect(() => {
     showData();
@@ -70,13 +88,38 @@ const SearchComponent = () => {
           margin: "auto",
         }}
       >
-        <Search
-          placeholder="input search text"
-          value={search}
-          onChange={searcher}
-          type="text"
-          className="form-control"
-        />
+        <Space>
+          <Search
+            placeholder="Ingrese su busqueda"
+            value={search}
+            onChange={searcher}
+            type="text"
+            className="form-control"
+          />
+          <Select
+            placeholder="Filtrar por género"
+            value={filterGender}
+            onChange={setFilterGender}
+          >
+            <Option value="">Genero</Option>
+            <Option value="Masculino">Masculino</Option>
+            <Option value="Femenino">Femenino</Option>
+          </Select>
+          <Select
+            placeholder="Filtrar por grado"
+            value={filterGrade}
+            onChange={setFilterGrade}
+          >
+            <Option value="">Grado</Option>
+            {/* Asegúrate de tener las opciones correctas aquí */}
+            <Option value="1">1</Option>
+            <Option value="2">2</Option>
+            <Option value="3">3</Option>
+            <Option value="4">4</Option>
+            <Option value="5">5</Option>
+            <Option value="6">6</Option>
+          </Select>
+        </Space>
 
         <Table
           style={{ width: "850px", display: "block", margin: "auto" }}
