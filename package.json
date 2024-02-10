@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.23.8",
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.11.3",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.17",
     "axios": "^1.6.5",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
